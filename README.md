@@ -2,7 +2,7 @@
 
 ## Предсказываем возраст краба!
 
-Приложение: ...
+Приложение: https://eto-enot-ds-start-10-app-fea88h.streamlit.app/
 
 Датасет взят из соревнования: https://www.kaggle.com/competitions/playground-series-s3e16
 
