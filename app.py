@@ -8,6 +8,8 @@ from sklearn.linear_model import LinearRegression
 with open('model.dat', "rb") as file:
     model = load(file)
 
+data = pd.read_csv('./data/CrabAgePrediction.csv')
+
 st.set_page_config('Предсказываем возраст краба', layout='wide', initial_sidebar_state='auto')
 st.write('<style>.stSpinner > div { justify-content: center; }</style>', unsafe_allow_html=True)
 st.write("### Предсказываем возраст краба!")
@@ -16,6 +18,9 @@ st.image(Image.open('crab2.jpg'))
 st.write('''
 Предсказание с помощью модели линейной регрессии, обученной на данных из
 [этого](https://www.kaggle.com/competitions/playground-series-s3e16) соревнования.''')
+
+with st.expander('Показать данные'):
+    st.dataframe(data.head(5))
 
 st.sidebar.header('Характеристики краба')
 
